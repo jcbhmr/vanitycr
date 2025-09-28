@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist",
+        "target": "esnext",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "lib": ["ESNext"],
+        "strict": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "rewriteRelativeImportExtensions": true,
+        "declaration": true,
+    },
+    "include": ["src"]
+}

@@ -1,0 +1,12 @@
+Scope = rs:ResourceScope rsRest:(" " rs2:ResourceScope { return rs2 })* { return [rs].concat(rsRest) }
+ResourceScope = type:ResourceType ":" name:ResourceName ":" a:Action aRest:("," a2:Action { return a2 })* { return {type,name,actions:[a].concat(aRest)} }
+ResourceType = $(ResourceTypeValue ("(" ResourceTypeValue ")")?)
+ResourceTypeValue = $[a-z0-9]+
+ResourceName = $((Hostname "/")? Component ("/" Component)*)
+Hostname = $(HostComponent ("." HostComponent)* ":" PortNumber)
+HostComponent = $([a-zA-Z0-9] / [a-zA-Z0-9] [a-zA-Z0-9-]* [a-zA-Z0-9])
+PortNumber = $[0-9]+
+Action = $[a-z]*
+Component = $(AlphaNumeric (Separator AlphaNumeric)*)
+AlphaNumeric = $[a-z0-9]+
+Separator = [_.] / "__" / "-"*
