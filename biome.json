@@ -1,0 +1,15 @@
+{
+	"$schema": "https://biomejs.dev/schemas/latest/schema.json",
+	"files": {
+		"includes": [
+			"**/*",
+			"!src/forwarded.d.ts",
+			"!src/forwarded.js",
+			"!src/scope.d.ts",
+			"!src/scope.js",
+			"!worker-configuration.d.ts",
+			"!src/www-authenticate.d.ts",
+			"!src/www-authenticate.js"
+		]
+	}
+}

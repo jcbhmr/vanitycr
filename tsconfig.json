@@ -1,16 +1,17 @@
 {
-    "compilerOptions": {
-        "rootDir": "src",
-        "outDir": "dist",
-        "target": "esnext",
-        "module": "nodenext",
-        "moduleResolution": "nodenext",
-        "lib": ["ESNext"],
-        "strict": true,
-        "allowJs": true,
-        "resolveJsonModule": true,
-        "rewriteRelativeImportExtensions": true,
-        "declaration": true,
-    },
-    "include": ["src"]
+	"compilerOptions": {
+		"strict": true,
+		"isolatedModules": true,
+		"lib": ["ESNext"],
+		"module": "nodenext",
+		"target": "esnext",
+		"moduleResolution": "nodenext",
+		"rewriteRelativeImportExtensions": true,
+		"erasableSyntaxOnly": true,
+		"verbatimModuleSyntax": true,
+		"resolveJsonModule": true,
+		// TODO: Fix worker-configuration.d.ts so that this can be removed
+		"skipLibCheck": true,
+		"noEmit": true
+	}
 }
