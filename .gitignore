@@ -142,5 +142,6 @@ vite.config.ts.timestamp-*
 .vite/
 #endregion
 
-# Cloudflare Wrangler CLI
+# Cloudflare Workers toolchain
 .wrangler/
+.dev.vars*

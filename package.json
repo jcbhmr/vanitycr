@@ -2,8 +2,6 @@
 	"type": "module",
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.4",
-		"@types/node": "^24.6.0",
-		"deno": "^2.1.14",
 		"execa": "^9.6.0",
 		"peggy": "^5.0.6",
 		"typescript": "^5.9.2",
@@ -15,10 +13,9 @@
 		"zod": "^4.1.11"
 	},
 	"scripts": {
-		"generate": "wrangler types && node ./generate.ts",
+		"generate": "node ./generate.ts",
 		"format": "biome format --write",
 		"lint": "biome check --write && tsc --noEmit",
-		"dev": "wrangler dev",
-		"dev:deno": "deno serve -A --watch ./src/index.ts"
+		"dev": "wrangler dev"
 	}
 }

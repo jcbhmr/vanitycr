@@ -1,5 +1,4 @@
 import { z } from "zod";
-import process from "node:process";
 
 export const { OCI_ROOT_URL, OCI_NAMESPACE } = z
 	.object({
